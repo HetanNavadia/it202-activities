@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    
+    <head><title>Canvas</title></head>
+    
+	<body>
+        
+        <canvas id="canvasDemo" width="1235" height="550" style="border:5px solid #FF0000;">
+             This will be displayed if your browser doesn't
+             support the canvas element. The closing tag is
+             necessary.
+        </canvas>
+        
+		<script>
+		
+		var a = document.getElementById("canvasDemo")
+		var rct = a.getContext("2d");
+	    rct.fillStyle = "#00000";
+		rct.fillRect(0, 0, 1245, 560);
+		
+	    // function for letter "i"
+	    function myLetter()
+		{
+            // Border of letter 'H'
+			rct.lineWidth = 10;
+            // Color of letter 'H'
+			rct.strokeStyle = "#ffffff";
+			
+			// creates letter 'H' from rectangles
+			rct.rect(100,100,80,200);
+            rct.rect(190,180,100,40);
+            rct.rect(300,100,80,200);
+		}
+		
+        // Text changes
+		myLetter();
+	    rct.stroke();
+		rct.font = "20px Arial";
+	    rct.fillStyle = "red";
+	    rct.fillText("653936248", 500, 300);	
+		</script>
+        
+    </body>
+    
+</html>
